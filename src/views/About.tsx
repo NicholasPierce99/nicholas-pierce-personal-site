@@ -1,6 +1,6 @@
 // assets
 import aboutPageImg from "../assets/second-page-test.png";
-import aboutIllustration from "../assets/fade-in-second-page.png";
+import aboutIllustration from "../assets/fade-in-second-enlarge-test.png";
 import facebookIcon from "../assets/facebook-icon.svg";
 import instagramIcon from "../assets/instagram-icon.svg";
 import twitterIcon from "../assets/twitter-icon.svg";
@@ -75,7 +75,7 @@ const About = () => {
             viewport={{ once: false }}
             src={aboutIllustration}
             alt=""
-            className="max-w-full sm:max-w-[1500px]"
+            className="max-w-full sm:max-w-[3000px]"
           />
         </div>
       </div>

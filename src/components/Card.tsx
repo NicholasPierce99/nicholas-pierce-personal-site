@@ -4,9 +4,14 @@ import { FC } from "react";
 interface CardProps {
   imgSrc: string;
   title: string;
+  refLink?: string;
 }
 
-const Card: FC<CardProps> = ({ imgSrc, title }) => {
+const Card: FC<CardProps> = ({ imgSrc, title, refLink }) => {
+  let renderLink = true;
+  if(refLink == ""){
+    renderLink = false;
+  }
   return (
     <div
       className="relative group flex items-center justify-center py-12 px-8 bg-accent
@@ -18,13 +23,17 @@ const Card: FC<CardProps> = ({ imgSrc, title }) => {
         alt=""
         className="transition-all duration-700 backdrop-blur-0 group-hover:scale-105 ease-in-out max-h-[220px]"
       />
-
-      <p
+      { renderLink ?
+      <a
         className="text-textPrimary absolute -top-12 left-1/2 -translate-x-1/2 opacity-0 group-hover:top-0.5 group-hover:opacity-100
       transition-all duration-700 ease-in-out text-center w-full px-8 text-base sm:text-lg z-10 [text-shadow:_0_4px_4px_rgb(0_0_0_/_50%)]"
-      >
-        {title}
-      </p>
+       href={refLink} target="_blank" rel="noopener noreferrer">{title}</a>
+       :
+       <p className="text-textPrimary absolute -top-12 left-1/2 -translate-x-1/2 opacity-0 group-hover:top-0.5 group-hover:opacity-100
+       transition-all duration-700 ease-in-out text-center w-full px-8 text-base sm:text-lg z-10 [text-shadow:_0_4px_4px_rgb(0_0_0_/_50%)]"
+       >{title}
+       </p>
+      }
     </div>
   );
 };

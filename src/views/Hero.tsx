@@ -36,7 +36,7 @@ const Hero = () => {
             <br />
             <span className="text-secondary">
               <Typewriter 
-                words = {["Freelancer", "Web", "AWS", "K8's"]} 
+                words = {["Freelance", "Consulting", "Web Dev", "AWS", "Kubernetes"]} 
                 cursor
                 cursorStyle="_"
                 typeSpeed={250}

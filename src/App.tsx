@@ -10,8 +10,8 @@ function App() {
       <Hero />
       <About />
       <Menu />
-      {/* 
       <Projects />
+      {/* 
       <Contact />
       */}
     </>

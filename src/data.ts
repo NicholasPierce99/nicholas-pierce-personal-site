@@ -1,45 +1,72 @@
-import uiUxOne from "./assets/ui-ux-project-one.svg";
-import uiUxTwo from "./assets/ui-ux-project-two.svg";
-import uiUxThree from "./assets/ui-ux-project-three.svg";
-import webOne from "./assets/web-project-one.jpeg";
-import webTwo from "./assets/web-project-two.jpeg";
-import webThree from "./assets/web-project-three.jpeg";
+import biometrics1 from './assets/biometrics1.png'
+import datascience1 from './assets/wordcloud.png'
+import multimedia from './assets/convolution.png'
+import covidData from './assets/covid-big-data.png'
+import softwareEngineering from './assets/se.png'
+import pf from './assets/project-falcon.png'
+interface Project {
+  id: number;
+  category: string;
+  img: string;
+  title: string;
+  link?: string;
+}
 
-export const projects = [
-  // {
-  //   id: 0,
-  //   category: "uiUx",
-  //   img: uiUxOne,
-  //   title: "UI/UX Web Template",
-  // },
-  // {
-  //   id: 1,
-  //   category: "uiUx",
-  //   img: uiUxTwo,
-  //   title: "UI/UX Tablet Template",
-  // },
-  // {
-  //   id: 2,
-  //   category: "uiUx",
-  //   img: uiUxThree,
-  //   title: "Solar System App Design",
-  // },
-  // {
-  //   id: 3,
-  //   category: "web",
-  //   img: webOne,
-  //   title: "Interior Design Website",
-  // },
-  // {
-  //   id: 4,
-  //   category: "web",
-  //   img: webTwo,
-  //   title: "Agency Landing Page",
-  // },
-  // {
-  //   id: 5,
-  //   category: "web",
-  //   img: webThree,
-  //   title: "Crypto Landing Page",
-  // },
+export const projects: Project[] = [
+  {
+    id: 0,
+    category: "university",
+    img: covidData,
+    title: "Covid Big Data Analytics",
+    link: "https://github.com/NicholasPierce99/University-Innit/tree/main/Big%20Data%20Management"
+  },
+  {
+    id: 1,
+    category: "university",
+    img: biometrics1,
+    title: "Biometrics Feature Scanning and Analysis",
+    link: "https://github.com/NicholasPierce99/University-Innit/tree/main/Biometrics"
+  },
+  {
+    id: 2,
+    category: "university",
+    img: multimedia,
+    title: "Multimedia Algorithm Implementations",
+    link: "https://github.com/NicholasPierce99/University-Innit/tree/main/Multimedia"
+  },
+  {
+    id: 3,
+    category: "university",
+    img: datascience1,
+    title: "Reddit Vaccine Dataset Analysis",
+    link: "https://github.com/NicholasPierce99/University-Innit/blob/main/Data%20Science/data%20science%20blog%20reddit%20vaccines/analysis.r"
+  },
+  {
+    id: 4,
+    category: "university",
+    img: softwareEngineering,
+    title: "Software Engineering Object Oriented Patterns",
+    link: "https://github.com/NicholasPierce99/University-Innit/tree/main/Software%20Engineering"
+  },
+  {
+    id: 5,
+    category: "app",
+    img: pf,
+    title: "Metabolomics Sample Management",
+    link: ""
+  },
+  {
+    id: 6,
+    category: "app",
+    img: pf,
+    title: "Metabolomics Quality Control",
+    link: ""
+  },
+  {
+    id: 7,
+    category: "app",
+    img: pf,
+    title: "Metabolomics Metadata Management",
+    link: ""
+  },
 ];
