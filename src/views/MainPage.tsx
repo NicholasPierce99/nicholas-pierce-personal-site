@@ -16,7 +16,7 @@ import { motion } from "framer-motion";
 import { transition } from "../utils/transition";
 import { fadeIn, scale } from "../utils/variants";
 
-const Hero = () => {
+const MainPage = () => {
   return <div id="home"
   className="min-h-screen flex items-center justify-center relative"
   style = {{
@@ -61,4 +61,4 @@ const Hero = () => {
   </div>
 };
 
-export default Hero;
+export default MainPage;

@@ -1,10 +1,8 @@
 // assets
 import aboutPageImg from "../assets/second-page-test.png";
 import aboutIllustration from "../assets/fade-in-second-enlarge-test.png";
-import facebookIcon from "../assets/facebook-icon.svg";
-import instagramIcon from "../assets/instagram-icon.svg";
-import twitterIcon from "../assets/twitter-icon.svg";
-import youtubeIcon from "../assets/youtube-icon.svg";
+import githubIcon from "../assets/github-mark-white.png";
+import linkedinIcon from "../assets/LI-In-Bug.png";
 
 // components
 import { SocialMediaIcon, Reveal } from "../components";
@@ -15,6 +13,30 @@ import { motion } from "framer-motion";
 // utils
 import { fadeIn, scale } from "../utils/variants";
 import { transition } from "../utils/transition";
+
+function onClickSocialMediaLink(platform: string, username: string): void {
+  const baseUrl = getSocialMediaBaseUrl(platform);
+  const url = `${baseUrl}/${username}`;
+  socialMediaOnClick(url);
+}
+
+function socialMediaOnClick(url: string): void{
+  window.open(url, '_blank');
+}
+
+function getSocialMediaBaseUrl(platform: string): string {
+  // Add logic to determine the base URL for each social media platform
+  // For example, you can use a switch statement or an object mapping.
+  switch (platform) {
+    case 'github':
+      return 'https://www.github.com';
+    case 'linkedin':
+      return 'https://linkedin.com';
+    // Add more cases for other social media platforms as needed
+    default:
+      return ''; // Default to an empty string or handle unsupported platforms accordingly
+  }
+}
 
 const About = () => {
   return (
@@ -45,7 +67,8 @@ const About = () => {
           <Reveal>
             <p className="text-center xl:text-start text-base sm:text-lg text-textSecondary">
             Certified AWS senior engineer at Eli Lilly and Company working on automating laboratory workflows via cloud native applications and managing k8's infrastructure.
-            Previously worked on biophysics visualizations and data science as a service products, api development, web applications, AI/ML fake review detectors, and a multitude of things in between.
+            AWS serverless/containers and web dev consultant.Previously worked on biophysics visualizations and data science as a service products, 
+            api development, serverless web applications, AI/ML pipelines, and a multitude of things in between.
             For any inquiries, please reach out :).
 
             </p>
@@ -59,10 +82,8 @@ const About = () => {
             viewport={{ once: false }}
             className="flex items-center justify-center xl:justify-start gap-6"
           >
-            <SocialMediaIcon imgSrc={facebookIcon} title="Facebook" />
-            <SocialMediaIcon imgSrc={instagramIcon} title="Instagram" />
-            <SocialMediaIcon imgSrc={twitterIcon} title="Twitter" />
-            <SocialMediaIcon imgSrc={youtubeIcon} title="YouTube" />
+            <SocialMediaIcon imgSrc={githubIcon} title="Github" onClick={() => onClickSocialMediaLink('github', 'NicholasPierce99')} />
+            <SocialMediaIcon imgSrc={linkedinIcon} title="Linkedin" onClick={() => onClickSocialMediaLink('linkedin', 'in/nicholas-pierce99')} />
           </motion.div>
         </div>
 
@@ -75,7 +96,7 @@ const About = () => {
             viewport={{ once: false }}
             src={aboutIllustration}
             alt=""
-            className="max-w-full sm:max-w-[3000px]"
+            className="max-w-full sm:max-w-[750px]"
           />
         </div>
       </div>
