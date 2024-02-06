@@ -1,6 +1,6 @@
 // assets
 import contactPageImg from "../assets/projects-background-dimmed.png";
-import contactIllustration from "../assets/contact-illustration.svg";
+import aboutIllustration from "../assets/fade-in-second-enlarge-test.png";
 
 // components
 import { Button, LabelInput, Reveal } from "../components";
@@ -44,9 +44,9 @@ const Contact = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false }}
-            src={contactIllustration}
+            src={aboutIllustration}
             alt=""
-            className="max-h-[348px]"
+            className="max-h-[1000px]"
           />
         </div>
 

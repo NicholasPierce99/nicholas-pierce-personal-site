@@ -1,6 +1,6 @@
 // assets
 import aboutPageImg from "../assets/second-page-test.png";
-import aboutIllustration from "../assets/fade-in-second-enlarge-test.png";
+import juiceImg from "../assets/juice.png";
 import githubIcon from "../assets/github-mark-white.png";
 import linkedinIcon from "../assets/LI-In-Bug.png";
 
@@ -21,7 +21,7 @@ function onClickSocialMediaLink(platform: string, username: string): void {
 }
 
 function socialMediaOnClick(url: string): void{
-  window.open(url, '_blank');
+  window.open(url);
 }
 
 function getSocialMediaBaseUrl(platform: string): string {
@@ -67,7 +67,7 @@ const About = () => {
           <Reveal>
             <p className="text-center xl:text-start text-base sm:text-lg text-textSecondary">
             Certified AWS senior engineer at Eli Lilly and Company working on automating laboratory workflows via cloud native applications and managing k8's infrastructure.
-            AWS serverless/containers and web dev consultant.Previously worked on biophysics visualizations and data science as a service products, 
+            Also an AWS and web consultant/freelancer. Previously worked on biophysics visualizations and data science as a service products, 
             api development, serverless web applications, AI/ML pipelines, and a multitude of things in between.
             For any inquiries, please reach out :).
 
@@ -94,9 +94,9 @@ const About = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false }}
-            src={aboutIllustration}
+            src={juiceImg}
             alt=""
-            className="max-w-full sm:max-w-[750px]"
+            className="max-w-full sm:max-w-[500px]"
           />
         </div>
       </div>
